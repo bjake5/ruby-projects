@@ -1,6 +1,5 @@
 # Function to organize numbers using a "bubble sort" algorithm
 # This algorithm is not performant, but helpful for educational demonstration
-
 def bubble_sort (numbers)
 
   # Utilized Ruby sort function to simplify identifying when the numbers were sorted
@@ -17,6 +16,7 @@ def bubble_sort (numbers)
       end
     end
   end
-  # Return the final array of sorted numbers
+  # Return the final array of sorted
   return numbers
+  
 end
