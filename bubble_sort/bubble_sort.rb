@@ -16,7 +16,7 @@ def bubble_sort (numbers)
       end
     end
   end
-  # Return the final array of sorted
+  # Return the final array of sorted numbers
   return numbers
   
 end
