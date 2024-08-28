@@ -12,7 +12,8 @@ def stock_picker (stock_prices)
   # Create permutations of all possible buy and sell days
   stock_prices_with_index = stock_prices_with_index.permutation(2).to_a
   
-  # Filter  the invalid permutations where a sell would happen before a buy and create a new array with valid days
+  # Filter the invalid permutations where a sell would happen before a buy 
+  # Use filter results to create a new array with valid days
   stock_prices_with_index.each do |stock_price_permutation|
     if stock_price_permutation[0][1] < stock_price_permutation[1][1]
       stock_price_permutation << (stock_price_permutation[1][0] - stock_price_permutation[0][0])
@@ -20,7 +21,7 @@ def stock_picker (stock_prices)
     end
   end  
 
-  # Identify the best price from the valid days
+  # Identify the best price from the valid days using gross profit margin
   best_buy_sell_days_by_price = valid_buy_sell_days.max_by { |a, b, c| c }.flatten
 
   # Extract the buy and sell days from the pricing data 
