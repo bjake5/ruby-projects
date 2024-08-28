@@ -25,5 +25,5 @@ def stock_picker (stock_prices)
   best_buy_sell_days_by_price = valid_buy_sell_days.max_by { |a, b, c| c }.flatten
 
   # Extract the buy and sell days from the pricing data 
-  best_buy_sell_days = [best_buy_sell_days_by_price[1],best_buy_sell_days_by_price[3]]
+  return best_buy_sell_days = [best_buy_sell_days_by_price[1],best_buy_sell_days_by_price[3]]
 end  
