@@ -4,6 +4,7 @@ This repository is used to organize the basic projects to practice the fundament
 <hr>
 
 # Bubble Sort
+https://github.com/bjake5/ruby-projects/tree/master/bubble_sort
 ## Feature Description
 * This is a Ruby function to sort a set of unordered numbers using the "Bubble Sort" algorithm.
 ## Interface
@@ -18,6 +19,7 @@ This repository is used to organize the basic projects to practice the fundament
 <hr>
 
 # Casesar Cipher
+https://github.com/bjake5/ruby-projects/tree/master/caesar_cipher
 ## Feature Description
 * This is a Ruby function to shift the alphabet characters within an input string by a specific shift factor.
 ## Interface
@@ -33,6 +35,7 @@ This repository is used to organize the basic projects to practice the fundament
 <hr>
 
 # Stock Picker
+https://github.com/bjake5/ruby-projects/tree/master/stock_picker
 ## Feature Description
 * This is a Ruby function to determine the best buy/sell day pairing for a stock within a time series to maximize profit.
 ## Interface
@@ -47,6 +50,7 @@ This repository is used to organize the basic projects to practice the fundament
 <hr>
 
 # Substrings
+https://github.com/bjake5/ruby-projects/tree/master/substrings
 ## Feature Description
 * This is a Ruby function to count the number of substrings in an input string that match a defined word dictionary.
 ## Interface
@@ -64,6 +68,7 @@ This repository is used to organize the basic projects to practice the fundament
 <hr>
 
 # Tic-Tac-Toe
+https://github.com/bjake5/ruby-projects/tree/master/tic-tac-toe
 ## Feature Description
 * This is a packaged OOP command line game to play tic-tac-toe with two people.
 * Each player may select their display name and symbol/string to be used within the tic-tac-toe board.
