@@ -14,7 +14,6 @@ This repository is used to organize the basic projects to practice the fundament
 * [Array] – A set of ordered numbers.
 ## Example
 `bubble_sort([4,3,78,2,0,2])`
-
 `=> [0,2,2,3,4,78]`
 <hr>
 
@@ -30,7 +29,6 @@ This repository is used to organize the basic projects to practice the fundament
 * String – The modified output string.
 ## Example
 `caesar_cipher("What a string!", 5)`
-
 `=> "Bmfy f xywnsl!"`
 <hr>
 
@@ -45,7 +43,6 @@ This repository is used to organize the basic projects to practice the fundament
 * [Array] – The indexes of the best day to buy and sell the stock.
 ## Example
 `stock_picker([17,3,6,9,15,8,6,1,10])`
-
 `=> [1,4]  # for a profit of $15 - $3 == $12`
 <hr>
 
@@ -63,7 +60,6 @@ This repository is used to organize the basic projects to practice the fundament
 `dictionary = ["below","down","go","going","horn","how","howdy","it","i","low","own","part","partner","sit"]`
 
 `substrings("Howdy partner, sit down! How's it going?", dictionary)`
-
 `=> { "down" => 1, "go" => 1, "going" => 1, "how" => 2, "howdy" => 1, "it" => 2, "i" => 3, "own" => 1, "part" => 1, "partner" => 1, "sit" => 1 }`
 <hr>
 
