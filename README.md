@@ -37,7 +37,7 @@ https://github.com/bjake5/ruby-projects/tree/master/caesar_cipher
 # Stock Picker
 https://github.com/bjake5/ruby-projects/tree/master/stock_picker
 ## Feature Description
-* This is a Ruby function to determine the best buy/sell day pairing for a stock within a time series to maximize profit.
+* This is a Ruby function to determine the best buy/sell day pairing for a stock within a time series to maximize gross profit.
 ## Interface
 * IRB / REPLs
 ## Inputs
