@@ -93,7 +93,7 @@ class Game
     i = 0
     while i < 3
       row = @valid_board_positions.filter_map { |_position, data| data[:value] if data[:row] == i }
-      return true if row.uniq.size == 1 && row.reject { |position| position == "_" }.size > 1
+      return true if row.uniq.size == 1 && row.count { |position| position != "_" } > 1
 
       i += 1
     end
@@ -104,7 +104,7 @@ class Game
     i = 0
     while i < 3
       column = @valid_board_positions.filter_map { |_position, data| data[:value] if data[:column] == i }
-      return true if column.uniq.size == 1 && column.reject { |position| position == "_" }.size > 1
+      return true if column.uniq.size == 1 && column.count { |position| position != "_" } > 1
 
       i += 1
     end
@@ -116,7 +116,7 @@ class Game
     top_left_bottom_right[0] = @valid_board_positions[:TOP_LEFT][:value]
     top_left_bottom_right[1] = @valid_board_positions[:CENTER][:value]
     top_left_bottom_right[2] = @valid_board_positions[:BOTTOM_RIGHT][:value]
-    if top_left_bottom_right.uniq.size == 1 && top_left_bottom_right.reject { |position| position == "_" }.size > 1
+    if top_left_bottom_right.uniq.size == 1 && top_left_bottom_right.count { |position| position != "_" } > 1
       return true
     end
 
@@ -124,7 +124,7 @@ class Game
     top_right_bottom_left[0] = @valid_board_positions[:TOP_RIGHT][:value]
     top_right_bottom_left[1] = @valid_board_positions[:CENTER][:value]
     top_right_bottom_left[2] = @valid_board_positions[:BOTTOM_LEFT][:value]
-    true if top_right_bottom_left.uniq.size == 1 && top_right_bottom_left.reject { |position| position == "_" }.size > 1
+    true if top_right_bottom_left.uniq.size == 1 && top_right_bottom_left.count { |position| position != "_" } > 1
   end
 
   # Check if there are any valid selections left (cat game?)

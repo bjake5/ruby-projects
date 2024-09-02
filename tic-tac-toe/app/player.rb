@@ -1,5 +1,4 @@
 # Class to organize player object data
-
 class Player
   attr_accessor :name, :symbol, :last_turn_number
 
