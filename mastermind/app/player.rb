@@ -15,6 +15,18 @@ class Player
     @game = game
     @name = nil
     @role = nil
+    setup_players
+  end
+
+  def setup_players
+    if @is_computer == false
+      update_name
+      determine_player_role
+    elsif @is_computer == true
+      determine_computer_role
+    else
+      raise 'error!'
+    end
   end
 
   def update_name

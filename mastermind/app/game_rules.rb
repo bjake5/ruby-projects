@@ -7,13 +7,18 @@ require_relative 'guess'
 class GameRules
   include ActionText
 
-  attr_accessor :code_maker, :code_guesser, :guesses_remaining, :roles_available
+  attr_accessor :code_maker, :code_guesser, :guess_number, :guesses_remaining, :roles_available, :colors_available,
+                :colors_in_code
 
-  def initialize
+  def initialize(game)
+    @game = game
     @code_maker = nil
     @code_guessor = nil
+    @guess_number = 1
     @guesses_remaining = 12
     @roles_available = %w[CODE_MAKER CODE_GUESSER]
+    @colors_available = %w[blue green orange purple red yellow]
+    @colors_in_code = 4
   end
 
   def claim_role(role)
