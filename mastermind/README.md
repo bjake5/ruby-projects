@@ -9,7 +9,7 @@ https://github.com/bjake5/ruby-projects/tree/master/mastermind
 * Command Line (prompted)
 ## Inputs
 * [Array] – code built from String-level individual color input.
-* * [Array] – guesses built from String-level individual color input.
+* [Array] – guesses built from String-level individual color input.
 ## Outputs
 * [Array] – feedback on each guess ("red" if correct color & position, "white" if correct color, incorrect position).
 * [Array] – guess history.
