@@ -4,6 +4,7 @@ require_relative 'game_board'
 require_relative 'player'
 require_relative 'guess'
 
+# This is a GameRules class to organize the basic rules of the game, including the roles, available colors, and guesses.
 class GameRules
   include ActionText
 

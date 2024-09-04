@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# This is a primary module to organize copy text and prompts used throughout the gameplay.
 module ActionText
   def horizontal_line
     "\n––––––––––––––––––––––––––––––––––––-–"
@@ -21,12 +22,20 @@ module ActionText
     "\nPlease select color ##{color_number} for your guess. You will have #{colors_remaining} colors remaining to select after this guess."
   end
 
+  def code_player_prompt(color_number, colors_remaining)
+    "\nPlease select color ##{color_number} for your code. You will have #{colors_remaining} colors remaining to select for this code."
+  end
+
   def current_guess_info_text(code)
-    "\nYou current code guess is #{code}."
+    "\nThe current code guess is #{code}."
+  end
+
+  def current_code_info_text(code)
+    "\nThe current code is #{code}."
   end
 
   def current_remaining_guess_colors(colors)
-    "\nThe current remaining colors are: #{colors}."
+    "\nThe remaining colors are: #{colors}."
   end
 
   def current_guess_feedback_text(feedback)

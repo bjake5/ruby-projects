@@ -5,6 +5,7 @@ require_relative 'game_rules'
 require_relative 'game_board'
 require_relative 'action_text'
 
+# This is a Player class to organize the various player data including name and roles.
 class Player
   include ActionText
 
