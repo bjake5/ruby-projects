@@ -1,4 +1,6 @@
-require_relative 'linked_list.rb'
+# frozen_string_literal: true
+
+require_relative 'linked_list'
 
 list = LinkedList.new
 

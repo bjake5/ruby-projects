@@ -1,5 +1,6 @@
-class LinkedList
+# frozen_string_literal: true
 
+class LinkedList
   def initialize
     @head = nil
     @tail = nil
@@ -9,12 +10,11 @@ class LinkedList
     node = Node.new(value)
     if @head.nil?
       @head = node
-      @tail = node
     else
       last_node = @tail
       last_node.next_node = node
-      @tail = node
     end
+    @tail = node
     puts node
   end
 
@@ -24,7 +24,6 @@ class LinkedList
       @head = node
       @tail = node
     else
-      first_node = @head
       node.next_node = node
       @head = node
     end
@@ -46,20 +45,13 @@ class LinkedList
     size
   end
 
-  def head
-    @head
-  end
-
-  def tail
-    @tail
-  end
+  attr_reader :head, :tail
 
   def at(index)
     current_node = @head
     next_node = current_node.next_node
-    value_at = nil
     i = 0
-    while i < index do
+    while i < index
       current_node = next_node
       next_node = current_node.next_node
       i += 1
@@ -83,8 +75,6 @@ class LinkedList
       current_node = next_node
       next_node = current_node.next_node
     end
-
-    next_node = nil
     current_node.next_node = nil
     @tail = current_node
   end
@@ -92,49 +82,42 @@ class LinkedList
   def contains(value)
     current_node = @head
 
-    until current_node == @tail do
-      if current_node.value == value
-        return true
-      else
-        current_node = current_node.next_node
-      end
+    until current_node == @tail
+      return true if current_node.value == value
+
+      current_node = current_node.next_node
+
     end
 
-    if current_node == @tail && current_node.value == value
-      return true
-    end
+    return true if current_node == @tail && current_node.value == value
+
     false
   end
 
   def find(value)
     current_node = @head
 
-    until current_node == @tail do
-      if current_node.value == value
-        return current_node
-      else
-        current_node = current_node.next_node
-      end
+    until current_node == @tail
+      return current_node if current_node.value == value
+
+      current_node = current_node.next_node
+
     end
 
-    if current_node == @tail && current_node.value == value
-      return current_node
-    end
+    return current_node if current_node == @tail && current_node.value == value
+
     nil
   end
 
   def to_s
     current_node = @head
     arr = []
-    until current_node == @tail || current_node.nil? do
+    until current_node == @tail || current_node.nil?
       arr << "( #{current_node.value} )"
       current_node = current_node.next_node
     end
-    if current_node == @tail && !current_node.nil?
-      arr << "( #{current_node.value} )"
-    end
-    arr << "nil" 
-    puts arr.join(" -> ")
+    arr << "( #{current_node.value} )" if current_node == @tail && !current_node.nil?
+    arr << 'nil'
+    puts arr.join(' -> ')
   end
-
 end
